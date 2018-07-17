@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">HW01</string>
+    <string name="bill_total_text">Bill Total</string>
+    <string name="tip_text" >Tip %</string>
+    <string name="value_text" />
+    <string name="tip_10">10%</string>
+    <string name="tip_15">15%</string>
+    <string name="tip_18">18%</string>
+    <string name="tip_custom">Custom</string>
+    <string name="custom_text">Custom</string>
+    <string name="tip_percent_text">25%</string>
+    <string name="bill_text_value">Bill Total</string>
+    <string name="tip_value_text">0.0</string>
+    <string name="Tip_text">Tip</string>
+    <string name="Total_TexView">Total</string>
+    <string name="total_TextView">0.0</string>
+    <string name="exit_button">EXIT</string>
+    <string name="activity_name">Tip Calculator</string>
+</resources>

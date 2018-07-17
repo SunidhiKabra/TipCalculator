@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.sunidhi.hw01.MainActivity">
+    <TextView
+        android:id="@+id/bill_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:textSize="20dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/bill_text_value" />
+
+    <EditText
+        android:id="@+id/bill_amount_editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/bill_text"
+        android:layout_alignBottom="@+id/bill_text"
+        android:layout_marginLeft="31dp"
+        android:layout_marginStart="31dp"
+        android:layout_toEndOf="@+id/bill_text"
+        android:layout_toRightOf="@+id/bill_text"
+        android:ems="10"
+        android:hint="Enter Bill Amount"
+        android:inputType="textPersonName" />
+
+    <RadioGroup
+        android:layout_width="270dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/bill_amount_editText"
+        android:layout_marginLeft="17dp"
+        android:orientation="horizontal"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="32dp"
+        android:layout_toEndOf="@+id/bill_text"
+        android:layout_toRightOf="@+id/bill_text"
+        android:id="@+id/radioGroup2">
+
+        <RadioButton
+            android:id="@+id/radio_tip10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/tip_10" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/tip_15" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/tip_18" />
+
+        <RadioButton
+            android:id="@+id/radioButton8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/tip_custom" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tip_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/bill_text"
+        android:layout_alignStart="@+id/bill_text"
+        android:layout_alignTop="@+id/radioGroup2"
+        android:textSize="20dp"
+        android:text="@string/tip_text" />
+
+    <EditText
+        android:id="@+id/tip_value_editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radioGroup2"
+        android:layout_marginTop="70dp"
+        android:layout_toEndOf="@+id/bill_text"
+        android:layout_toRightOf="@+id/bill_text"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/tip_value_text" />
+
+    <TextView
+        android:id="@+id/tip_Value_TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tip_value_editText"
+        android:layout_alignBottom="@+id/tip_value_editText"
+        android:layout_alignEnd="@+id/tip_textView"
+        android:layout_alignRight="@+id/tip_textView"
+        android:text="@string/Tip_text"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tip_Value_TextView"
+        android:layout_alignStart="@+id/tip_Value_TextView"
+        android:layout_below="@+id/tip_value_editText"
+        android:layout_marginTop="29dp"
+        android:text="@string/Total_TexView"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/total_editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView8"
+        android:layout_alignEnd="@+id/tip_value_editText"
+        android:layout_alignRight="@+id/tip_value_editText"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/total_TextView" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tip_Value_TextView"
+        android:layout_alignEnd="@+id/textView8"
+        android:layout_alignRight="@+id/textView8"
+        android:layout_marginBottom="25dp"
+        android:text="@string/custom_text"
+        android:textSize="20dp" />
+
+    <SeekBar
+        android:id="@+id/custom_seekBar"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_alignBottom="@+id/textView9"
+        android:layout_alignLeft="@+id/tip_value_editText"
+        android:layout_alignStart="@+id/tip_value_editText"
+        android:max="50"
+        android:progress="25" />
+
+    <TextView
+        android:id="@+id/percent_textView"
+        android:inputType="numberDecimal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/custom_seekBar"
+        android:layout_toEndOf="@+id/tip_value_editText"
+        android:layout_toRightOf="@+id/tip_value_editText"
+        android:text="@string/tip_percent_text"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/button_exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/total_editText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:text="@string/exit_button" />
+
+</RelativeLayout>
